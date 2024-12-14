@@ -691,3 +691,29 @@ footer .license-text a:hover {
 .hidden {
     opacity: 0;
 }
+/* Remove default link styling */
+a {
+    color: inherit; /* Inherit color from parent elements */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Style the navigation links */
+nav a {
+    font-size: 1.8rem;
+    color: white; /* Set the default link color */
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+/* Ensure span in the home section has the correct color */
+.home-content span {
+    color: #b74b4b; /* Change this to the desired color */
+}
