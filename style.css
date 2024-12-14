@@ -670,3 +670,61 @@ footer .license-text a {
 footer .license-text a:hover {
     color: #282828;
 }
+.dynamic-text {
+    position: relative;
+    height: 3rem; /* Adjust to fit text size */
+    overflow: hidden;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b74b4b;
+}
+
+.dynamic-text span {
+    position: absolute;
+    width: 100%;
+    animation: fadeSlide 10s infinite;
+    opacity: 0;
+    text-align: center;
+}
+
+/* Animations for each span */
+.dynamic-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+.dynamic-text span:nth-child(2) {
+    animation-delay: 2s;
+}
+.dynamic-text span:nth-child(3) {
+    animation-delay: 4s;
+}
+.dynamic-text span:nth-child(4) {
+    animation-delay: 6s;
+}
+.dynamic-text span:nth-child(5) {
+    animation-delay: 8s;
+}
+
+/* Keyframes for fade-in and slide-up */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
