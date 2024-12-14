@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Electronics Engineering Portfolio</title>
+
+    <meta name="description" content="Electronics engineering student passionate about IT, IoT, and embedded systems. Check out my portfolio showcasing my projects and skills.">
+    <meta name="keywords" content="Electronics, engineering, IoT, embedded systems, student portfolio, technology projects">
+    <meta name="author" content="ACHRAF AHAL">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Electronics Engineering Portfolio">
+    <meta property="og:description" content="Explore my electronics engineering projects and skills.">
+    <meta property="og:image" content="https://achrafahal.github.io/portfolio/image.jpg">
+    <meta property="og:url" content="https://achrafahal.github.io/portfolio">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://achrafahal.github.io/portfolio">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="scroll-link">Home</a>
+            <a href="#about" class="scroll-link">About Me</a>
+            <a href="#education" class="scroll-link">Education</a>
+            <a href="#projects" class="scroll-link">Projects</a>
+            <a href="#contact" class="scroll-link">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="myphoto.jpg" alt="Achraf's Photo">
+        </div>
+        <div class="home-content">
+            <h1>Hi, my name is <span>Achraf</span></h1>
+            <h3 class="typing-text">I'm an <span></span></h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/achrafahal" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ACHRAFAHAL" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:ahalachraf@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <a href="#" class="btn">Let's GO</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I am Achraf, a passionate electronics engineer with a focus on embedded systems and innovative projects. I specialize in designing efficient hardware solutions and working on IoT-based projects.</p>
+        <p>With a strong foundation in microcontrollers, circuit design, and system optimization, I aim to deliver impactful solutions for real-world challenges. I am always exploring cutting-edge technologies and seeking collaborative opportunities.</p>
+        <p>Working on hands-on projects fuels my passion for creativity and continuous learning. Combining hardware and software to control, monitor, or enhance the functionality of electronic devices. It's in these moments that I find the perfect blend of challenge and fulfillment.</p>
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot" onclick="window.open('https://www.cpge.ac.ma/')">
+                    <img src="ECPGE.jpg" alt="Class Préparatoire Logo">
+                </div>
+                <div class="timeline-content">
+                    <h3>Classe Préparatoire - Lycée Reda Slaoui Agadir</h3>
+                    <p><strong>2022 - 2024</strong></p>
+                    <p>Studied intensive courses preparing for further studies in engineering.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot" onclick="window.open('https://www.ensea.fr/')">
+                    <img src="ENSEA.png" alt="ENSEA Logo">
+                </div>
+                <div class="timeline-content">
+                    <h3>ENSEA - Cergy</h3>
+                    <p><strong>2024 - 2027</strong></p>
+                    <p>Currently in Paris pursuing an engineering degree with a focus on Electronics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="projects-title">My Projects</h2>
+        <div class="project-item">
+            <h3 class="project-title">Motorized Gimbal Project</h3>
+            <a href="https://github.com/ACHRAFAHAL/Motorized_gimbal_Project" target="_blank" class="github-icon">
+                <span>Click here</span>
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <h3 class="project-status">More is Coming...</h3>
+        <p class="project-description">Stay tuned for future projects!</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me at:</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/achrafahal" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/ACHRAFAHAL" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:ahalachraf@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 AHALAchraf. All rights reserved.</p>
+        <p class="license">Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
