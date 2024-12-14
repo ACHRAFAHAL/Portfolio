@@ -717,3 +717,208 @@ nav a.active {
 .home-content span {
     color: #b74b4b; /* Change this to the desired color */
 }
+/* Mobile View (up to 768px width) */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%; /* Reduce base font size for smaller screens */
+    }
+
+    body {
+        font-size: 1.4rem; /* Adjust body font size */
+    }
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+        margin-left: 2rem; /* Reduce margin */
+    }
+
+    .home {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 50vw; /* Adjust image size */
+    }
+
+    .about, .projects {
+        padding: 4rem 5%;
+    }
+
+    .about h2, .projects-title {
+        font-size: 3.5rem;
+    }
+
+    .about p, .projects .project-description {
+        font-size: 1.6rem;
+    }
+
+    .contact h2 {
+        font-size: 3rem;
+    }
+
+    .contact p {
+        font-size: 1.6rem;
+    }
+
+    .contact .social-icons a {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.8rem;
+    }
+
+    /* Adjust the size of project items on smaller screens */
+    .project-item {
+        flex-direction: column; /* Stack project items vertically */
+        align-items: flex-start;
+    }
+
+    .github-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Adjust the footer text size */
+    footer p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Tablet View (up to 1024px width) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 60%;
+    }
+
+    header {
+        padding: 1rem 8%;
+    }
+
+    .logo {
+        font-size: 2.8rem;
+    }
+
+    nav a {
+        font-size: 1.7rem;
+        margin-left: 3rem;
+    }
+
+    .home {
+        gap: 4rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content h3 {
+        font-size: 3.5rem;
+    }
+
+    .home-img img {
+        width: 45vw;
+    }
+
+    .about, .projects {
+        padding: 5rem 7%;
+    }
+
+    .about h2, .projects-title {
+        font-size: 3.5rem;
+    }
+
+    .about p, .projects .project-description {
+        font-size: 1.7rem;
+    }
+
+    footer p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Adjust for Portrait Phones */
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        padding: 1rem 4%;
+    }
+
+    .logo {
+        font-size: 2.3rem;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-img img {
+        width: 60vw; /* Reduce the size of the image */
+    }
+
+    .about, .projects {
+        padding: 3rem 5%;
+    }
+
+    .about h2, .projects-title {
+        font-size: 3rem;
+    }
+
+    .about p, .projects .project-description {
+        font-size: 1.4rem;
+    }
+
+    footer p {
+        font-size: 1.3rem;
+    }
+
+    /* Stack items in contact */
+    .contact .social-icons {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact .social-icons a {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.6rem;
+    }
+}
