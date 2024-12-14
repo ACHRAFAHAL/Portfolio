@@ -22,6 +22,18 @@
 
     <!-- Canonical Link -->
     <link rel="canonical" href="https://achrafahal.github.io/portfolio">
+
+    <!-- CSS for smooth transitions -->
+    <style>
+        .dynamic-text {
+            font-size: 2em;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -35,29 +47,62 @@
     </header>
 
     <section id="home" class="home">
-    <div class="home-img">
-        <img src="myphoto.jpg" alt="Achraf's Photo">
-    </div>
-    <div class="home-content">
-        <h1>Hi, my name is <span>Achraf</span></h1>
-        <h3 class="typing-text">I'm an <span></span></h3>
-        <p id="greeting" class="dynamic-text">
-            <span>Hello</span>
-            <span>Bonjour</span>
-            <span>مرحبا</span>
-            <span>Hallo</span>
-            <span>こんにちは</span>
-        </p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/achrafahal" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/ACHRAFAHAL" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:ahalachraf@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <div class="home-img">
+            <img src="myphoto.jpg" alt="Achraf's Photo">
         </div>
-        <a href="#" class="btn">Let's GO</a>
-    </div>
-</section>
+        <div class="home-content">
+            <h1>Hi, my name is <span>Achraf</span></h1>
+            <h3 class="typing-text">I'm an <span></span></h3>
+            <!-- Greeting with dynamic text -->
+            <p id="greeting" class="dynamic-text">Hello</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/achrafahal" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ACHRAFAHAL" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:ahalachraf@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <a href="#" class="btn">Let's GO</a>
+        </div>
+    </section>
 
+    <script>
+        // Select the element where the greeting text is displayed
+        const greetingElement = document.getElementById('greeting');
 
+        // List of greetings in different languages
+        const greetings = {
+            en: "Hello",
+            ar: "مرحبًا",   // Arabic
+            fr: "Bonjour",  // French
+            ja: "こんにちは", // Japanese
+            de: "Hallo"     // German
+        };
+
+        // Function to switch greeting text every second
+        let currentLangIndex = 0;
+        const languages = Object.keys(greetings); // ['en', 'ar', 'fr', 'ja', 'de']
+
+        function switchGreetingLanguage() {
+            // Hide the current greeting text with fade-out effect
+            greetingElement.classList.add('hidden');
+
+            // Switch to the next language
+            currentLangIndex = (currentLangIndex + 1) % languages.length;
+            const currentLang = languages[currentLangIndex];
+
+            // Set the new greeting text
+            setTimeout(() => {
+                greetingElement.textContent = greetings[currentLang];
+                // Show the new greeting text with fade-in effect
+                greetingElement.classList.remove('hidden');
+            }, 500); // Wait for the fade-out to finish before changing text
+        }
+
+        // Call the function every 1 second (1000 milliseconds)
+        setInterval(switchGreetingLanguage, 1000);
+    </script>
+
+</body>
+ 
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>Hello! I am Achraf, a passionate electronics engineer with a focus on embedded systems and innovative projects. I specialize in designing efficient hardware solutions and working on IoT-based projects.</p>
