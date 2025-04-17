@@ -3,205 +3,459 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Electronics Engineering Portfolio</title>
-
-    <meta name="description" content="Electronics engineering student passionate about IT, IoT, and embedded systems. Check out my portfolio showcasing my projects and skills.">
-    <meta name="keywords" content="Electronics, engineering, IoT, embedded systems, student portfolio, technology projects">
-    <meta name="author" content="ACHRAF AHAL">
-
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="Electronics Engineering Portfolio">
-    <meta property="og:description" content="Explore my electronics engineering projects and skills.">
-    <meta property="og:image" content="https://achrafahal.github.io/portfolio/image.jpg">
-    <meta property="og:url" content="https://achrafahal.github.io/portfolio">
-
-    <!-- Robots -->
-    <meta name="robots" content="index, follow">
-
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://achrafahal.github.io/portfolio">
-
-    <!-- CSS for smooth transitions -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .home-content {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .dynamic-text {
-            font-size: 3em; /* Larger font size for the greeting */
-            font-weight: bold;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .hidden {
-            opacity: 0;
-        }
-
-        h1 {
-            font-size: 2.5em;
-        }
-
-        span {
-            color: #3498db; /* You can customize this color */
-        }
-    </style>
+    <title>My Portfolio</title>
+    <link rel="icon" href="assets/images/dinosaur.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Google Fonts - Press Start 2P for headings and VT323 for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#home" class="scroll-link">Home</a>
-            <a href="#about" class="scroll-link">About Me</a>
-            <a href="#education" class="scroll-link">Education</a>
-            <a href="#projects" class="scroll-link">Projects</a>
-            <a href="#contact" class="scroll-link">Contact</a>
-        </nav>
-    </header>
-
-    <section id="home" class="home">
-        <div class="home-img">
-            <img src="me.png" alt="Achraf's Photo">
-        </div>
-        <div class="home-content">
-            <!-- Greeting text above the "Achraf" name -->
-            <p id="greeting" class="dynamic-text">Hello</p>
-            <h1>Hi, my name is <span>Achraf</span></h1>
-            <h3 class="typing-text">I'm an <span></span></h3>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/achrafahal" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/ACHRAFAHAL" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:ahalachraf@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>LOADING...</h1>
+            <div class="progress-bar">
+                <div class="progress"></div>
             </div>
-            <a href="#" class="btn">Let's GO</a>
+            <p class="loading-tip">
+                <p>Don't wait for the loading bar</p>
+                <p>Press START to begin!</p>
+            <button id="start-button" class="arcade-button">START</button>
         </div>
-    </section>
+    </div>
 
-    <script>
-        // Select the element where the greeting text is displayed
-        const greetingElement = document.getElementById('greeting');
+    <!-- Audio Elements -->
+    <audio id="background-music" loop>
+        <source src="assets/audio/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="level-complete-sound">
+        <source src="assets/audio/level-complete.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="click-sound">
+        <source src="assets/audio/click.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="complete">
+        <source src="assets/audio/win.mp3" type="audio/mpeg">
+    </audio>
 
-        // List of greetings in different languages
-        const greetings = {
-            en: "Hello",
-            ar: "مرحبًا",   // Arabic
-            fr: "Bonjour",  // French
-            ja: "こんにちは", // Japanese
-            de: "Hallo"     // German
-        };
 
-        // Function to switch greeting text every second
-        let currentLangIndex = 0;
-        const languages = Object.keys(greetings); // ['en', 'ar', 'fr', 'ja', 'de']
-
-        function switchGreetingLanguage() {
-            // Hide the current greeting text with fade-out effect
-            greetingElement.classList.add('hidden');
-
-            // Switch to the next language
-            currentLangIndex = (currentLangIndex + 1) % languages.length;
-            const currentLang = languages[currentLangIndex];
-
-            // Set the new greeting text
-            setTimeout(() => {
-                greetingElement.textContent = greetings[currentLang];
-                // Show the new greeting text with fade-in effect
-                greetingElement.classList.remove('hidden');
-            }, 500); // Wait for the fade-out to finish before changing text
-        }
-
-        // Call the function every 1 second (1000 milliseconds)
-        setInterval(switchGreetingLanguage, 1000);
-    </script>
-
-</body>
-
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Hello! I am Achraf, a passionate electronics engineer with a focus on embedded systems and innovative projects. I specialize in designing efficient hardware solutions and working on IoT-based projects.</p>
-        <p>With a strong foundation in microcontrollers, circuit design, and system optimization, I aim to deliver impactful solutions for real-world challenges. I am always exploring cutting-edge technologies and seeking collaborative opportunities.</p>
-        <p>Working on hands-on projects fuels my passion for creativity and continuous learning. Combining hardware and software to control, monitor, or enhance the functionality of electronic devices. It's in these moments that I find the perfect blend of challenge and fulfillment.</p>
-    </section>
-
-    <section id="education" class="education">
-        <h2>Education</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot" onclick="window.open('https://www.cpge.ac.ma/')">
-                    <img src="ECPGE.jpg" alt="Class Préparatoire Logo">
-                </div>
-                <div class="timeline-content">
-                    <h3>Classe Préparatoire - Lycée Reda Slaoui Agadir</h3>
-                    <p><strong>2022 - 2024</strong></p>
-                    <p>Studied intensive courses preparing for further studies in engineering.</p>
-                </div>
+    <!-- Game Container -->
+    <div id="game-container" class="hidden">
+        <!-- Hub World (Home Screen) -->
+        <div id="hub-world" class="game-level active">
+            <div class="level-header">
+                <h1 class="glitch-title">My PORTFOLIO :)</h1>
+                <div class="score-display">SCORE: <span id="score">0</span></div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot" onclick="window.open('https://www.ensea.fr/')">
-                    <img src="ENSEA.png" alt="ENSEA Logo">
+            <div class="hub-content">
+                <div class="character-container">
+                    <div class="character">
+                        <div class="character-chat-bubble">
+                            <img src="assets/images/hello.png" alt="Chat Bubble">
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-content">
-                    <h3>ENSEA - Cergy</h3>
-                    <p><strong>2024 - 2027</strong></p>
-                    <p>Currently in Paris pursuing an engineering degree with a focus on Electronics.</p>
+                <div class="level-select">
+                    <div class="level-item" data-level="about">
+                        <div class="level-icon folder-icon"></div>
+                        <h3>ABOUT ME</h3>
+                    </div>
+                    <div class="level-item" data-level="projects">
+                        <div class="level-icon folder-icon"></div>
+                        <h3>PROJECTS</h3>
+                    </div>
+                    <div class="level-item" data-level="skills">
+                        <div class="level-icon folder-icon"></div>
+                        <h3>SKILLS</h3>
+                    </div>
+                    <div class="level-item" data-level="education">
+                        <div class="level-icon folder-icon"></div>
+                        <h3>EDUCATION</h3>
+                    </div>
+                    <div class="level-item" data-level="contact">
+                        <div class="level-icon folder-icon"></div>
+                        <h3>CONTACT</h3>
+                    </div>
+                </div>
+                <div class="instructions">
+                    <p>USE <img src="assets/images/LEFT.png" alt="Clickable Item" class="collectible-static"> / <img src="assets/images/RIGHT.png" alt="Clickable Item" class="collectible-static">
+                        TO PLACE THE ROBOT ON TOP OF A FOLDER AND <img src="assets/images/SPACE.png" alt="Clickable Item" class="collectible-static"> 
+                        TO OPEN OR SIMPLY CLICK ON IT. GO SEE WHAT IS INSIDE 👀</p>
+                    <p>
+                        IF YOU SEE 
+                        <img src="assets/images/dollar.png" alt="Clickable Item" class="collectible-static">
+                        INSIDE A FOLDER, CLICK ON IT TO COLLECT POINTS 
+                    </p>
+                    <p>THANKS FOR VISITING MY PORTFOLIO - I APPRECIATE YOUR INTEREST :)</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="projects" class="projects">
-        <h2 class="projects-title">My Projects</h2>
-        <div class="project-item">
-            <h3 class="project-title">Motorized Gimbal Project</h3>
-            <a href="https://github.com/ACHRAFAHAL/Motorized_gimbal_Project" target="_blank" class="github-icon">
-                <span>Click here</span>
-                <i class="fa-brands fa-github"></i>
-            </a>
+        <!-- About Me Level -->
+        <div id="about-level" class="game-level">
+            <div class="level-header">
+                <h2>FOLDER 1: ABOUT ME</h2>
+                <div class="level-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="about-progress"></div>
+                    </div>
+                </div>
+                <button class="back-button">BACK TO HUB</button>
+            </div>
+            <div class="level-content">
+                <div class="character-container">
+                    <div class="character">
+                        <div class="character-chat-bubble">
+                            <img src="assets/images/hello.png" alt="Chat Bubble">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="profile-photo">
+                        <img src="assets/images/Profile.jpeg" alt="Achraf's Profile Photo">
+                        <div class="collectible folder-collectible" style="top: 80px; left: 15px" data-points="200"></div>
+                        <div class="chat-bubble">
+                            <img src="assets/images/hello.png" alt="Chat Bubble">
+                        </div>
+                    </div>
+                    <div class="about-section">
+                        <h3>WHO AM I?</h3>
+                        <p>I am an electronics and computer science engineering student, passionate about embedded systems, IoT and robotics. I love developing my skills, collaborating, and attending hackathons.</p>
+                        <p>PS : I love coding too 👨‍💻</p>
+                        <div class="collectible folder-collectible" data-points="100"></div>
+                    </div>
+                    <div class="about-section">
+                        <h3>What I like ?</h3>
+                        <p>Working on hands-on projects fulfills my passion for creativity and continuous learning. Combining hardware and software to control, monitor, or enhance the functionality of electronic devices. It's in these moments that I find the perfect blend of challenge and fulfillment.</p>
+                        <div class="collectible folder-collectible" data-points="100"></div>
+                    </div>
+                    <div class="about-section">
+                        <h3>INTERESTS</h3>
+                        <div class="interests-gifs">
+                            <div class="gif-container">
+                                <img src="assets/gif/swimmer.gif" alt="Swimming" />
+                                <img src="assets/images/swimmer_BC.png" alt=" Bubble" class="cloud-bubble" />
+                            </div>
+                            <div class="gif-container">
+                                <img src="assets/gif/football.gif" alt="Football" />
+                                <img src="assets/images/football_BC.png" alt=" Bubble" class="cloud-bubble" />
+                            </div>
+                            <div class="gif-container">
+                                <img src="assets/gif/gaming.gif" alt="Gaming" />
+                                <img src="assets/images/gaming_BC.png" alt=" Bubble" class="cloud-bubble" />
+                            </div>
+                            <div class="gif-container">
+                                <img src="assets/gif/robotics.gif" alt="robotics" />
+                                <img src="assets/images/robotics_BC.png" alt=" Bubble" class="cloud-bubble" />
+                            </div>
+                        </div>
+                        <div class="collectible folder-collectible" data-points="100"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-item">
-            <h3 class="project-title">Gravitational Waves (MANIM project)</h3>
-            <a href="https://achrafahal.github.io/Gravitational-Waves-MANIM-project" target="_blank" class="github-icon">
-                <span>Click here</span>
-                <i class="fa-brands fa-github"></i>
-            </a>
+
+        <!-- Projects Level -->
+        <div id="projects-level" class="game-level">
+            <div class="level-header">
+                <h2>FOLDER 2: PROJECTS</h2>
+                <div class="level-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="projects-progress"></div>
+                    </div>
+                </div>
+                <button class="back-button">BACK TO HUB</button>
+            </div>
+            <div class="level-content">
+                <div class="character-container">
+                    <div class="character">
+                        <div class="character-chat-bubble">
+                            <img src="assets/images/What_do_you_think.png" alt="Chat Bubble">
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <img src="assets/images/gimbal.png" alt="Gimbal Project" class="project-image" />
+                        <h3>3-axis Motorized Gimbal</h3>
+                        <div class="project-details">
+                            <p>3-axis gimbal using gyroscopic sensor fusion and precise servomotor control for smooth, stabilized camera footage.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/ACHRAFAHAL/Motorized_gimbal_Project" rel="noopener noreferrer" target="_blank" class="project-link">GITHUB</a>
+                            </div>
+                        </div>
+                        <div class="collectible folder-collectible" data-points="200"></div>
+                    </div>
+                    <div class="project-item">
+                        <img src="assets/images/alarm.png" alt="Alarm System Project" class="project-image" />
+                        <h3>Alarm Control System</h3>
+                        <div class="project-details">
+                            <p>Laser‐based obstacle detection alarm with multi-code deactivation system, integrating analog sensing with digital microcontroller control.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/ACHRAFAHAL/Obstacle_Detection_Alarm_With_Protection_Codes_Security_System" rel="noopener noreferrer" target="_blank" class="project-link">GITHUB</a>
+                            </div>
+                        </div>
+                        <div class="collectible folder-collectible" data-points="200"></div>
+                    </div>
+                    <div class="project-item">
+                        <img src="assets/images/api.png" alt="API Project" class="project-image" />
+                        <h3>Image Classification API</h3>
+                        <div class="project-details">
+                            <p>A Streamlit-powered visual AI dashboard that uses the Moondream API to describe, caption, detect, and point to objects in uploaded images.</p>
+                            <div class="project-links">
+                                <a href="https://moondreamdash.streamlit.app/" rel="noopener noreferrer" target="_blank" class="project-link">VIEW PROJECT</a>
+                                <a href="https://github.com/ACHRAFAHAL/moondream-api-ghw" rel="noopener noreferrer" target="_blank" class="project-link">GITHUB</a>
+                            </div>
+                        </div>
+                        <div class="collectible folder-collectible" data-points="200"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3 class="project-status">More is Coming...</h3>
-        <p class="project-description">Stay tuned for future projects!</p>
-    </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me at:</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/achrafahal" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/ACHRAFAHAL" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:ahalachraf@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <!-- Skills Level -->
+        <div id="skills-level" class="game-level">
+            <div class="level-header">
+                <h2>FOLDER 3: SKILLS</h2>
+                <div class="level-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="skills-progress"></div>
+                    </div>
+                </div>
+                <button class="back-button">BACK TO HUB</button>
+            </div>
+            <div class="level-content">
+                <div class="character-container">
+                    <div class="character">
+                        <div class="character-chat-bubble">
+                            <img src="assets/images/What_do_you_think.png" alt="Chat Bubble">
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>TECHNICAL SKILLS</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <h4>PCB design </h4>
+                                <img src="assets/images/pcb-board.png" alt="pcb-board image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                            <div class="skill-item">
+                                <h4>3D modeling </h4>
+                                <img src="assets/images/3d-model.png" alt="pcb-board image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Computer vision</h4>
+                                <img src="assets/images/tensorflow.png" alt="pcb-tensorflow image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                            <div class="skill-item">
+                                <h4>MATLAB </h4>
+                                <img src="assets/images/matlab.png" alt="matlab image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>CODING SKILLS</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <h4>C for microcontrollers</h4>
+                                <img src="assets/images/C.png" alt="C image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Java</h4>
+                                <img src="assets/images/java.png" alt="Java image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Python</h4>
+                                <img src="assets/images/python.png" alt="Python image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                            <div class="skill-item">
+                                <h4>HTML, CSS, JavaScript</h4>
+                                <img src="assets/images/html-js-css-logos.png" alt="WEB DEV image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                            <div class="skill-item">
+                                <h4>RESTful APIs</h4>
+                                <img src="assets/images/restfull-API.png" alt="RESTful API image" class="project-image" />
+                                <div class="collectible folder-collectible" data-points="150"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2024 AHALAchraf. All rights reserved.</p>
-        <p class="license">Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a></p>
-    </footer>
+        <!-- Education Level -->
+        <div id="education-level" class="game-level">
+            <div class="level-header">
+                <h2>FOLDER 4: EDUCATION</h2>
+                <div class="level-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="education-progress"></div>
+                    </div>
+                </div>
+                <button class="back-button">BACK TO HUB</button>
+            </div>
+            <div class="level-content">
+                <div class="character-container">
+                    <div class="character">
+                        <div class="character-chat-bubble">
+                            <img src="assets/images/What_do_you_think.png" alt="Chat Bubble">
+                        </div>
+                    </div>
+                </div>
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date"> 2022</div>
+                        <div class="timeline-content">
+                            <h3>High School</h3>
+                                <h4>Lycée Technique Al Idrissi</h4>
+                                <p>Engineering Science and Technology diploma with distinction</p>
+                                <div class="education-links">
+                                    <a href="https://www.linkedin.com/company/lyceetechniquealidrissi/" rel="noopener noreferrer" target="_blank" class="education-link">VISIT WEBSITE</a>
+                                </div>
+                        </div>
+                        <div class="collectible folder-collectible" style="bottom: 20px; right: 20px" data-points="250"></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - 2024</div>
+                        <div class="timeline-content">
+                            <h3>Preparatory Class</h3>
+                            <h4>CPGE Réda Slaoui</h4>
+                            <p>Intensive two-year program to prepare students for entrance exams to prestigious engineering schools.</p>
+                            <div class="education-links">
+                                <a href="https://www.cpge.ac.ma/sitecpge/lrs-ag/resultat.aspx" rel="noopener noreferrer" target="_blank" class="education-link">VISIT WEBSITE</a>
+                            </div>
+                        </div>
+                        <div class="collectible folder-collectible" style="bottom: 20px; right: 20px" data-points="250"></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 - NOW</div>
+                        <div class="timeline-content">
+                            <h3>Engineering School</h3>
+                            <h4>Ecole Nationale Supérieure de l'Electronique et de ses Applications (ENSEA)</h4>
+                            <p>Engineering degree in the fields of electronics and computer science.</p>
+                            <div class="education-links">
+                                <a href="https://www.ensea.fr/" rel="noopener noreferrer" target="_blank" class="education-link">VISIT WEBSITE</a>
+                            </div>
+                        </div>
+                        <div class="collectible folder-collectible" style="bottom: 20px; right: 20px" data-points="250"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script>
-        document.querySelectorAll('.scroll-link').forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+        <!-- Contact Level -->
+        <div id="contact-level" class="game-level">
+            <div class="level-header">
+                <h2>FOLDER 5: CONTACT</h2>
+                <div class="level-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="contact-progress"></div>
+                    </div>
+                </div>
+                <button class="back-button">BACK TO HUB</button>
+            </div>
+            <div class="level-content">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h3>SEND ME A MESSAGE</h3>
+                        <form id="contact-form" action="https://formspree.io/f/mdkevkev" method="POST">
+                            <input type="hidden" name="_redirect" value="javascript:void(0);">
+                            <div class="form-group">
+                                <label for="name">NAME:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">EMAIL:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">MESSAGE:</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="arcade-button">SEND MESSAGE</button>
+                        </form>
+                    </div>
+                    <div class="social-links">
+                        <h3>CONNECT WITH ME</h3>
+                        <div class="social-icons">
+                            <div class="social-wrapper">
+                                <a href="https://github.com/ACHRAFAHAL" class="social-icon" target="_blank" data-platform="github">
+                                    <img src="assets/images/github.png" alt="github Logo" class="social-logo">
+                                    <span>GITHUB</span>
+                                </a>
+                                <div class="collectible folder-collectible" style="top: 23%; right: 26%" data-points="300"></div>
+                            </div> 
+                            <div class="social-wrapper">
+                                <a href="https://www.linkedin.com/in/achrafahal" class="social-icon" target="_blank" linkedin">
+                                    <img src="assets/images/linkedin.png" alt="LinkedIn Logo" class="social-logo">
+                                    <span>LINKEDIN</span>
+                                </a>
+                                <div class="collectible folder-collectible" style="top: 35%; right: 26%"data-points="300"></div>
+                            </div>                                                       
+                        </div>
+                        <div class="character-container">
+                            <div class="character">
+                                <div class="character-chat-bubble">
+                                    <img src="assets/images/THANKS_FOR_VISITING.png" alt="Chat Bubble">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game UI Elements -->
+        <div id="game-ui">
+            <!-- Sound Control Section -->
+            <div class="sound-control">
+                <button id="toggle-sound" class="sound-on">SOUND: ON</button>
+            </div>
+        <div>   
+            
+            <!-- Badges Container Section -->
+            <div class="badges-container">
+                <div class="badge folder-badge" data-badge="about" data-unlocked="false"></div>
+                <div class="badge folder-badge" data-badge="projects" data-unlocked="false"></div>
+                <div class="badge folder-badge" data-badge="skills" data-unlocked="false"></div>
+                <div class="badge folder-badge" data-badge="education" data-unlocked="false"></div>
+                <div class="badge folder-badge" data-badge="contact" data-unlocked="false"></div>
+            </div>
+        </div>
+
+
+        <!-- Achievement Popup -->
+        <div id="achievement-popup" class="hidden">
+            <div class="achievement-content">
+                <h3>ACHIEVEMENT UNLOCKED!</h3>
+                <p id="achievement-text"></p>
+                <div id="achievement-points"></div>
+            </div>
+        </div>
+
+        <!-- All badges collected Popup -->
+        <div id="all-badges-popup" class="hidden">
+            <div class="all-badges-content">
+                <h3>🎉 YOU COLLECTED EVERYTHING! 🎉</h3>
+                <p>Congratulations! You've collected all the badges!</p>
+                <p>THANK YOU FOR PLAYING!</p>
+                <button id="close-all-badges-popup" class="arcade-button">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
