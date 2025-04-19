@@ -398,10 +398,6 @@ function handleKeyPress(e) {
     }
 }
 
-function createPixelArtIcons() {
-    // Placeholder for creating pixel art icons if needed
-}
-
 function handleResize() {
     const isMobile = window.innerWidth <= 768;
     const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
@@ -416,6 +412,6 @@ function repositionCollectibles() {
 // Start the game once the DOM is ready.
 document.addEventListener('DOMContentLoaded', () => {
     initGame();
-    createPixelArtIcons();
     window.addEventListener('resize', handleResize);
 });
+
