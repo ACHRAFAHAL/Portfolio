@@ -309,7 +309,7 @@ button {
 #hub-world .character-container {
     position: absolute;
     top: 180px;
-    left: 80px;
+    left: 200px;
     z-index: 10;
 }
 
