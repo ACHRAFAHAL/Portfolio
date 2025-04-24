@@ -4,7 +4,6 @@ This is an interactive game-inspired portfolio website. The website guides visit
 
 
 ## File Structure
-
 <pre> 
 portfolio-game/
 ├── index.html             # Main HTML file
