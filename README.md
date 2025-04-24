@@ -2,7 +2,6 @@
 
 This is a fully interactive, game-inspired portfolio website that transforms professional work into an engaging digital adventure. The website guides visitors through multiple "levels" (or "missions") where they can discover your biography, projects, skills, education, and contact information as if playing an 80s arcade game or retro platformer.
 
----
 
 ## File Structure
 
