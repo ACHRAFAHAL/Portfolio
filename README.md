@@ -1,6 +1,7 @@
 # 🏆 My Portfolio – PortXFolio hackathon Winner
 
-Welcome to my personal portfolio project! This portfolio was submitted to [PortXFolio](https://portxfolio25.devpost.com/project-gallery) and was selected as a **Winner**. It showcases my background, skills, projects, and design sense in an engaging way. This portfolio is inspired by my passion for games. I wanted to build a portfolio that’s not just a static showcase but a fun, game-like adventure where users can explore my skills and projects while collecting items, unlocking badges, and progressing through levels.
+   Welcome to my personal portfolio project! This portfolio was submitted to [PortXFolio](https://portxfolio25.devpost.com/project-gallery) and was selected as a **Winner**. It showcases my background, skills, projects, and design sense in an engaging way. This portfolio is inspired by my passion for games. 
+   I wanted to build a portfolio that’s not just a static showcase but a fun, game-like adventure where users can explore my skills and projects while collecting items, unlocking badges, and progressing through levels.
 
 ## 🔗 Link 
 
