@@ -1,6 +1,10 @@
-# 🏆 My Portfolio – PortXFolio  Winner
+# 🏆 My Portfolio – PortXFolio hackathon Winner
 
-Welcome to my personal portfolio project! This portfolio was submitted to [PortXFolio](#) and was selected as a **Winner** and recipient of the **AoPS Coupons** prize. It showcases my background, skills, projects, and design sense in a clear and engaging way.
+Welcome to my personal portfolio project! This portfolio was submitted to [PortXFolio](https://portxfolio25.devpost.com/project-gallery) and was selected as a **Winner**. It showcases my background, skills, projects, and design sense in an engaging way. This portfolio is inspired by my passion for games. I wanted to build a portfolio that’s not just a static showcase but a fun, game-like adventure where users can explore my skills and projects while collecting items, unlocking badges, and progressing through levels.
+
+## 🔗 Link 
+
+Go visit : https://achrafahal.github.io/Portfolio/
 
 ## 🚀 Features
 
@@ -12,32 +16,19 @@ Welcome to my personal portfolio project! This portfolio was submitted to [PortX
 
 ## 📸 Screenshots
 
-> I’ll be updating this section with screenshots soon!
+![Capture d'écran 2025-05-07 204849](https://github.com/user-attachments/assets/106a8d34-5e0f-48cd-8ad4-ecc12da1c93d)
+![Capture d'écran 2025-05-07 204916](https://github.com/user-attachments/assets/eeb4d4ed-a29e-48bb-a001-7b65b4eaf69b)
+![Capture d'écran 2025-05-07 205000](https://github.com/user-attachments/assets/75676676-b068-4e63-b105-c866b84dcec2)
+![Capture d'écran 2025-05-07 205104](https://github.com/user-attachments/assets/8dc0ed40-9a38-4d98-82a7-454df90e108f)
 
-<!-- Example format: -->
-<!-- ![Homepage](screenshots/home.png) -->
-<!-- ![Project section](screenshots/projects.png) -->
-
-## 🧠 What I Learned
-
-Working on this project taught me a lot—not just technically, but creatively. I gained hands-on experience in:
-
-- Structuring content for clarity and impact
-- Responsive web design and UI/UX principles
-- Showcasing work professionally
-- Building a cohesive personal brand
 
 ## 🔧 Tech Stack
 
 - HTML5 / CSS3
-- JavaScript
-- [Add your frameworks or tools here if used: e.g., React, Bootstrap, Tailwind CSS]
+- JavaScript (Vanilla)
+- figma
 
 ## 📁 Folder Structure
-
-
-
-## File Structure
 <pre> 
 portfolio-game/
 ├── index.html             # Main HTML file
@@ -50,12 +41,6 @@ portfolio-game/
    ├── gif/                # Directory for gifs
    └── audio/              # Directory for sound effects 
 </pre>
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
 
 ## Credits
 
