@@ -1,6 +1,40 @@
-## Overview
+# 🏆 My Portfolio – PortXFolio  Winner
 
-This is an interactive game-inspired portfolio website. The website guides visitors through multiple "Folders" where they can discover my biography, projects, skills, education, and contact information.
+Welcome to my personal portfolio project! This portfolio was submitted to [PortXFolio](#) and was selected as a **Winner** and recipient of the **AoPS Coupons** prize. It showcases my background, skills, projects, and design sense in a clear and engaging way.
+
+## 🚀 Features
+
+- Responsive and modern design
+- Project showcase with detailed descriptions
+- Smooth user experience with intuitive navigation
+- Downloadable resume
+- Contact form / social links
+
+## 📸 Screenshots
+
+> I’ll be updating this section with screenshots soon!
+
+<!-- Example format: -->
+<!-- ![Homepage](screenshots/home.png) -->
+<!-- ![Project section](screenshots/projects.png) -->
+
+## 🧠 What I Learned
+
+Working on this project taught me a lot—not just technically, but creatively. I gained hands-on experience in:
+
+- Structuring content for clarity and impact
+- Responsive web design and UI/UX principles
+- Showcasing work professionally
+- Building a cohesive personal brand
+
+## 🔧 Tech Stack
+
+- HTML5 / CSS3
+- JavaScript
+- [Add your frameworks or tools here if used: e.g., React, Bootstrap, Tailwind CSS]
+
+## 📁 Folder Structure
+
 
 
 ## File Structure
